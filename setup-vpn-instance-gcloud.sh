@@ -9,11 +9,9 @@ echo "Sleeping 30 seconds"
 sleep 30
 ssh -o StrictHostKeyChecking=no $INSTANCE_IP << EOF
  git clone https://github.com/matthias91/gce-install-scripts.git
- cd gce-install-scripts
- sh install-openvpn-ubuntu-20.04-docker.sh
+ sh gce-install-scripts/install-openvpn-ubuntu-20.04-docker.sh
 EOF
 ssh -o StrictHostKeyChecking=no $INSTANCE_IP << EOF
- cd gce-install-scripts
- sh install-openvpn-ubuntu-20.04-docker-2.sh
+ sh gce-install-scripts/install-openvpn-ubuntu-20.04-docker-2.sh
 EOF
 scp -o StrictHostKeyChecking=no $INSTANCE_IP:~/user1.ovpn /mnt/c/Users/Matthias/Desktop/
