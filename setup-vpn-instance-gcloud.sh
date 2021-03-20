@@ -15,3 +15,4 @@ ssh -o StrictHostKeyChecking=no $INSTANCE_IP << EOF
  sh gce-install-scripts/install-openvpn-ubuntu-20.04-docker-2.sh
 EOF
 scp -o StrictHostKeyChecking=no $INSTANCE_IP:~/user1.ovpn /mnt/c/Users/Matthias/Desktop/
+scp -o StrictHostKeyChecking=no $INSTANCE_IP:~/user2.ovpn /mnt/c/Users/Matthias/Desktop/
